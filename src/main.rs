@@ -1,5 +1,5 @@
 fn main() {
-    println!("{:?}",find_prime_factors(12));
+    println!("{:?}",find_prime_factors(18));
 }
 
 fn find_prime_factors(mut n:u128)->Vec<u128>{
@@ -8,7 +8,7 @@ fn find_prime_factors(mut n:u128)->Vec<u128>{
     while n>=p*p{
         if n%p==0{
             res.push(p);
-            n=n/2;
+            n/=p;
         }
         else{
             p+=1;
